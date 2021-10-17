@@ -1,0 +1,232 @@
+*,
+*:before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:inherit;
+}
+html{
+    font-size: 10px;
+    }
+.header{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.header label{
+    display: none;
+}
+.header .header__child:nth-child(1){
+    flex-basis: 25%;
+}
+
+.header .header__child:nth-child(2){
+    flex-basis: 75%;
+}
+.header .header__child .nav{
+    display:flex;
+    justify-content: space-between;
+}
+.header .header__child .nav ul{
+    display:flex;  
+    list-style-type: none;
+}
+.header .header__child .nav ul li a{
+    text-decoration:none;
+    padding:15px;
+    color:inherit;
+    text-transform:capitalize;
+}
+    .header .header__child:nth-child(1) img{
+        width: 150px;
+    }
+
+    body{
+        color:black;
+        padding: 0 60px;
+        box-sizing: border-box;
+    }
+    .banner{
+        background-color: #e6e6e6;
+        position: relative;
+        height: calc(70vh - 15px);
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    
+    .banner .bximg{
+        
+        right:0;
+        top: 0;
+        width: 55%;
+        height: 100%;
+        
+    }    
+    .bximg img{
+        width: 100%;
+        height:100%;
+    }
+    .banner .banner-content h2{
+        font-size: 3rem;
+        text-transform:inherit;
+
+    }
+    .banner .banner-content {
+        font-size: 1.6rem;
+        text-transform: capitalize;
+        padding-left: 70px;
+    }
+    .btn{
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: inherit;
+    }
+    .btn-black{
+        background-color: #111;
+        color: #fff;
+    }
+   .banner .banner-content .btn:nth-of-type(1){
+       margin-right: 10rem;
+   }
+   .banners{
+    background-color: #e6e6e6;
+    position: relative;
+    height: calc(70vh - 15px);
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+   }
+.banners .bximg{
+    margin-right:0;
+    width: 65%;
+    height:100%;
+ }
+ 
+.banners  .banner-contents h2{
+    font-size: 3rem;
+    text-transform:inherit;
+ }
+.banners  .banner-contents {
+    font-size: 1.6rem;
+    text-transform:capitalize;
+    padding-left: 70px;
+}
+.bannerss{
+    background-color: #e6e6e6;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+} 
+.bannerss .banner-contentss{
+font-size: 2rem;
+margin-top: 6rem;
+}
+
+
+   #toggler{
+    display:none;
+   }
+   .row{
+        display:flex;
+        margin-top: 4rem;
+        flex-wrap: wrap;
+       }
+   .row .item{
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis:190px;
+   }
+   .row .item:not(:last-of-type){
+       margin-right: 20px;
+   }
+   .row .item .card{
+       width: 100%;
+   }
+   .row .item .card .imgBx img{
+       width: 100%;
+   }
+   .row .item .card .content{
+       font-size: 1.6rem;
+       text-transform: inherit;
+   }
+   .rows{
+    display:flex;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+   }
+   .rows .items{
+       flex-grow: 1;
+       flex-shrink: 0;
+       flex-basis:190px;
+   }
+   .rows .items:not(:last-of-type){
+    margin-right: 20px;
+}
+   .rows .items .cards{
+       width: 100%;
+   }
+   .rows .items .cards .imgBxs img{
+       width:100%;
+   }
+   .rows .items .cards .contents{
+       font-size: 1.6rem;
+       text-transform: inherit;
+   }
+   
+
+   @media(max-width:1200px){
+       .header{
+        display: flex;
+        align-items: center;
+        height: 70px;
+        font-size: 1.5rem;
+        padding: 0 7px;
+        flex-direction: column;
+       }
+       body{
+        color:black;
+        padding: 0 30px;
+        }
+        .header .header__child .nav{
+            display:flex;
+            justify-content: space-evenly;
+        }
+       }
+       @media(max-width:900px){
+        .header .header__child .nav{
+            display:block;
+            justify-content: space-evenly;
+            position: absolute;
+            top:50px;
+            right: 0px;
+            width:0px;
+            padding: 0 7px;
+            height: calc(100vh - 50px);
+            background-color: #e6e6e6;
+            z-index:10;
+            transition: width 2s;
+        }
+          .header{
+            height:50px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .header .header__child .nav ul{
+            display:block;
+        
+        }
+        #toggler:checked + .nav{
+      width: 30rem;
+      overflow: hidden;
+        }
+       .header label{
+       display: block;
+        }
+ 
+}
